@@ -1,168 +1,343 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tomodachi Life - Download</title><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&display=swap" rel="stylesheet"><style>
-body{
+<title>Geometry Dash Download</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
 margin:0;
-font-family:'Lexend',sans-serif;
-background:linear-gradient(180deg,#020617,#0f172a);
-color:#e2e8f0;
-text-align:center;
+padding:0;
+box-sizing:border-box;
+font-family:'Tajawal',sans-serif;
 }
 
-/* LOGO */
-.logo{
-width:120px;
-border-radius:25px;
-margin-top:40px;
-box-shadow:0 0 30px rgba(0,0,0,0.6);
+body{
+background:#070b14;
+color:white;
+overflow-x:hidden;
 }
 
-/* SLIDER */
-.slider{
-max-width:400px;
-margin:20px auto;
-overflow:hidden;
-border-radius:20px;
-}
+/* BACKGROUND */
 
-.slides{
-display:flex;
-transition:.6s;
-}
-
-.slides img{
+.bg{
+position:fixed;
 width:100%;
-height:230px;
-object-fit:cover;
+height:100%;
+background:
+radial-gradient(circle at top,#1d4ed8 0%,transparent 35%),
+radial-gradient(circle at bottom,#22c55e 0%,transparent 30%),
+#070b14;
+z-index:-1;
+}
+
+/* CONTAINER */
+
+.container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding-top:60px;
+flex-wrap:wrap;
+}
+
+/* GAME IMAGE */
+
+.game-card{
+position:relative;
+}
+
+.game-card img{
+width:320px;
+border-radius:28px;
+box-shadow:
+0 0 40px rgba(34,197,94,.4),
+0 0 80px rgba(59,130,246,.3);
+transition:.4s;
+}
+
+.game-card img:hover{
+transform:scale(1.03);
+}
+
+/* TEXT */
+
+.hero-text{
+max-width:500px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 18px;
+background:#22c55e;
+border-radius:999px;
+font-size:14px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.hero-text h1{
+font-size:58px;
+line-height:1.1;
+font-weight:900;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+color:#cbd5e1;
+line-height:1.8;
+margin-bottom:30px;
 }
 
 /* BUTTONS */
-.btn{
-width:260px;
-margin:10px auto;
-padding:15px;
-border-radius:15px;
-background:rgba(255,255,255,0.05);
-cursor:pointer;
-border:1px solid rgba(255,255,255,0.05);
-font-weight:bold;
+
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
-.btn.active{
-background:linear-gradient(135deg,#38bdf8,#22c55e);
-color:#020617;
-box-shadow:0 0 20px #38bdf8;
+.download-btn{
+background:linear-gradient(45deg,#22c55e,#16a34a);
+padding:18px 40px;
+border-radius:18px;
+font-size:20px;
+font-weight:800;
+text-decoration:none;
+color:white;
+box-shadow:0 0 30px rgba(34,197,94,.4);
+transition:.3s;
 }
 
-/* DOWNLOAD */
-.download{
-width:260px;
-margin:20px auto;
-padding:18px;
-border-radius:20px;
+.download-btn:hover{
+transform:translateY(-4px);
+}
+
+.trailer-btn{
+background:#111827;
+padding:18px 30px;
+border-radius:18px;
+font-size:18px;
+font-weight:700;
+text-decoration:none;
+color:white;
+border:1px solid #334155;
+}
+
+/* FEATURES */
+
+.features{
+margin-top:90px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.feature{
+background:rgba(17,24,39,.7);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.feature:hover{
+transform:translateY(-5px);
+border-color:#22c55e;
+}
+
+.feature h3{
+font-size:22px;
+margin-bottom:15px;
+}
+
+.feature p{
+color:#94a3b8;
+line-height:1.7;
+}
+
+/* SCREENSHOTS */
+
+.section-title{
+text-align:center;
+font-size:42px;
 font-weight:900;
-background:linear-gradient(135deg,#38bdf8,#22c55e);
-color:#020617;
-cursor:pointer;
-animation:pulse 1.5s infinite;
+margin-top:90px;
+margin-bottom:40px;
 }
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1);}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
-/* COUNTER */
-.counter{
-font-size:13px;
-opacity:.7;
-margin-top:10px;
+.gallery img{
+width:100%;
+border-radius:20px;
+transition:.4s;
+border:2px solid transparent;
 }
 
-/* OVERLAY */
-#overlay{
-display:none;
-position:fixed;
-inset:0;
-background:#020617;
-justify-content:center;
-align-items:center;
-flex-direction:column;
+.gallery img:hover{
+transform:scale(1.03);
+border-color:#22c55e;
 }
 
-.progress{
-width:200px;
-height:6px;
-background:#111;
-border-radius:10px;
-margin-top:20px;
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:40px;
+margin-top:80px;
+color:#64748b;
+font-size:15px;
 }
 
-.bar{
-width:0%;
-height:100%;
-background:linear-gradient(90deg,#38bdf8,#22c55e);
-}
-</style></head><body><img class="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/TomodachiLifeBoxartNA.jpg/250px-TomodachiLifeBoxartNA.jpg"><h1>Tomodachi Life</h1>
-<p>Select your device</p><!-- SLIDER IMAGES --><div class="slider">
-    <div class="slides" id="slides">
-        <img src="https://tomodachimobile.com/img/5994451268115565882_121.jpg">
-        <img src="https://tomodachimobile.com/img/Image-from-iOS-2.jpg">
-        <img src="https://tomodachimobile.com/img/5994451268115565882_121.jpg">
-    </div>
-</div><div class="btn" onclick="selectDevice(this)">Android</div>
-<div class="btn" onclick="selectDevice(this)">iOS</div>
-<div class="btn" onclick="selectDevice(this)">PC / Mac</div><div class="download" onclick="start()">Download Now</div><div class="counter" id="counter">🔥 3,421 users downloading now...</div><!-- OVERLAY --><div id="overlay">
-<h2 id="status">Connecting...</h2>
-<div class="progress"><div class="bar" id="bar"></div></div>
-</div><!-- CPA SCRIPT --><script type="text/javascript">
-var pmYKV_zCf_dgNrOc={"it":4602140,"key":"9bed3"};
-</script><script src="https://d1g1lhd4vferpn.cloudfront.net/bc5bc2d.js"></script><script>
-let selected=false;
+/* MOBILE */
 
-function selectDevice(el){
-selected=true;
-document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));
-el.classList.add('active');
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:42px;
 }
 
-function start(){
-if(!selected){
-alert("Select device first");
-return;
+.game-card img{
+width:260px;
 }
 
-let overlay=document.getElementById('overlay');
-let bar=document.getElementById('bar');
-
-overlay.style.display="flex";
-
-let progress=0;
-let interval=setInterval(()=>{
-progress+=20;
-bar.style.width=progress+"%";
-
-if(progress>=100){
-clearInterval(interval);
-if(typeof _Yf==="function"){_Yf();}
-}
-},800);
 }
 
-/* AUTO SLIDER */
-let i=0;
-setInterval(()=>{
-i=(i+1)%3;
-document.getElementById('slides').style.transform=`translateX(-${i*100}%)`;
-},2500);
+</style>
+</head>
 
-/* FAKE USERS */
-setInterval(()=>{
-let n=Math.floor(Math.random()*4000)+1000;
-document.getElementById('counter').innerText="🔥 "+n+" users downloading now...";
-},2000);
-</script></body>
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="game-card">
+
+<img src="https://i.postimg.cc/ZRYk47kf/1703084045-geometry-dash-1.webp">
+
+</div>
+
+<div class="hero-text">
+
+<div class="badge">
+🔥 TRENDING GAME 2026
+</div>
+
+<h1>
+Download Geometry Dash
+Latest APK Version
+</h1>
+
+<p>
+Enjoy the ultimate rhythm platformer experience filled with intense challenges and exciting levels.
+Download the game now for free and experience smooth gameplay with stunning graphics.
+</p>
+
+<div class="buttons">
+
+<!-- CPA SCRIPT -->
+
+<script type="text/javascript">
+var iEscA_TVb_nTWUzc={
+"it":4326813,
+"key":"31d02"
+};
+</script>
+
+<script src="https://d1g1lhd4vferpn.cloudfront.net/af76b51.js"></script>
+
+<!-- DOWNLOAD BUTTON -->
+
+<button class="download-btn" onclick="_JF()">
+✓ Download Now
+</button>
+
+<a class="trailer-btn" href="#">
+▶ Watch Trailer
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="feature">
+<h3>⚡ Fast Gameplay</h3>
+<p>
+Experience fast-paced action and addictive rhythm-based gameplay.
+</p>
+</div>
+
+<div class="feature">
+<h3>🎮 Epic Levels</h3>
+<p>
+Discover unique and difficult levels with powerful visual effects.
+</p>
+</div>
+
+<div class="feature">
+<h3>🔥 Latest Update</h3>
+<p>
+Download the newest version with all recent updates and features.
+</p>
+</div>
+
+</section>
+
+<!-- SCREENSHOTS -->
+
+<h2 class="section-title">
+Game Screenshots
+</h2>
+
+<section class="gallery">
+
+<img src="https://i.postimg.cc/QCRn9Szz/03-3.webp">
+
+<img src="https://i.postimg.cc/T3v4T7gj/geometry-dash-unlocked-apk-520x245.webp">
+
+<img src="https://i.postimg.cc/nzW3g0n4/Jump.webp">
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+Geometry Dash Landing Page © 2026
+</div>
+
+</div>
+
+</body>
 </html>
