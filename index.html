@@ -1,886 +1,185 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>Roblox Hub • Robux Generator</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Win a Lululemon Gift Card</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#111,#2a2a2a);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.card{
+background:#fff;
+width:100%;
+max-width:460px;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.hero{
+background:#111;
+padding:40px 30px;
+color:#fff;
+text-align:center;
+}
+
+.logo{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.logo img{
+    width:90px;
+    height:auto;
+    display:block;
+}
+
+
+.badge{
+display:inline-block;
+padding:8px 16px;
+background:#fff;
+color:#111;
+font-weight:700;
+border-radius:30px;
+font-size:13px;
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:34px;
+font-weight:800;
+margin-bottom:10px;
+}
+
+.hero p{
+opacity:.85;
+font-size:16px;
+}
+
+.content{
+padding:30px;
+}
+
+.features{
+display:flex;
+justify-content:space-between;
+margin-bottom:30px;
+}
+
+.item{
+flex:1;
+text-align:center;
+}
+
+.item h3{
+font-size:22px;
+color:#111;
+}
+
+.item span{
+font-size:13px;
+color:#777;
+}
+
+.cta{
+display:block;
+width:100%;
+padding:18px;
+text-align:center;
+background:#111;
+color:#fff;
+text-decoration:none;
+font-size:18px;
+font-weight:700;
+border-radius:14px;
+transition:.3s;
+}
+
+.cta:hover{
+background:#333;
+}
+
+.footer{
+margin-top:24px;
+text-align:center;
+font-size:13px;
+color:#777;
+line-height:1.6;
+}
+</style>
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(45deg, #2b1b3a, #1a2639);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-            position: relative;
-        }
-
-        /* Notifications Design - Mobile Responsive */
-        .notifications-panel {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            left: 10px;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 8px;
-            pointer-events: none;
-        }
-
-        @media (min-width: 480px) {
-            .notifications-panel {
-                right: 20px;
-                left: auto;
-                width: 300px;
-            }
-        }
-
-        .notif-item {
-            background: #fff2db;
-            border-radius: 25px 0 0 25px;
-            padding: 10px 16px;
-            width: 100%;
-            max-width: 280px;
-            box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transform: translateX(150%);
-            animation: slideInRight 0.5s forwards, fadeOutRight 0.5s 4s forwards;
-            border-right: 6px solid #ffaa5e;
-        }
-
-        @media (max-width: 480px) {
-            .notif-item {
-                max-width: 260px;
-                padding: 8px 14px;
-            }
-            .notif-avatar {
-                width: 38px;
-                height: 38px;
-                font-size: 18px;
-            }
-            .notif-username {
-                font-size: 14px;
-            }
-        }
-
-        @keyframes slideInRight {
-            to { transform: translateX(0); }
-        }
-        @keyframes fadeOutRight {
-            to { opacity: 0; transform: translateX(150%); }
-        }
-
-        .notif-avatar {
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            background: #ffaa5e;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            font-size: 20px;
-            color: #2b1b3a;
-        }
-
-        .notif-content {
-            flex: 1;
-        }
-
-        .notif-username {
-            font-weight: 800;
-            font-size: 15px;
-            color: #3a281f;
-        }
-
-        .notif-robux {
-            font-size: 13px;
-            font-weight: 700;
-            color: #e07c2c;
-        }
-
-        /* Main Card - Mobile Optimized */
-        .card {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-            background: #f9f3e8;
-            border-radius: 35px 35px 25px 25px;
-            padding: 20px 18px;
-            box-shadow: 15px 15px 0 #00000030;
-            border: 3px solid #4a2b1e;
-            position: relative;
-        }
-
-        @media (max-width: 400px) {
-            .card {
-                padding: 16px 14px;
-                border-radius: 25px 25px 20px 20px;
-            }
-        }
-
-        /* Stats - Responsive */
-        .stats-bar {
-            background: #4a2b1e;
-            border-radius: 50px;
-            padding: 14px 16px;
-            margin-bottom: 25px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 10px;
-            border: 2px solid #ffd966;
-            color: #ffe8d6;
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        @media (max-width: 380px) {
-            .stats-bar {
-                font-size: 13px;
-                padding: 12px 10px;
-            }
-        }
-
-        .stat {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .stat i {
-            color: #ffaa5e;
-            font-size: 18px;
-        }
-
-        @media (max-width: 380px) {
-            .stat i {
-                font-size: 16px;
-            }
-        }
-
-        .live-dot {
-            width: 10px;
-            height: 10px;
-            background: #ff5500;
-            border-radius: 0;
-            transform: rotate(45deg);
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            50% { opacity: 0.2; }
-        }
-
-        /* Promo Banner - Responsive */
-        .promo-banner {
-            background: #ffd966;
-            border-radius: 16px;
-            padding: 12px 15px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 3px solid #4a2b1e;
-            font-weight: 800;
-            color: #2c1b10;
-            font-size: 14px;
-        }
-
-        @media (max-width: 400px) {
-            .promo-banner {
-                padding: 10px 12px;
-                font-size: 13px;
-            }
-        }
-
-        .promo-banner i {
-            font-size: 24px;
-            color: #e07c2c;
-        }
-
-        @media (max-width: 380px) {
-            .promo-banner i {
-                font-size: 20px;
-            }
-        }
-
-        .promo-banner span {
-            background: #4a2b1e;
-            color: #ffd966;
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 13px;
-        }
-
-        /* Steps */
-        .step {
-            transition: 0.3s;
-        }
-        .step.hidden {
-            display: none;
-        }
-
-        .step-header {
-            font-size: 32px;
-            font-weight: 900;
-            text-align: center;
-            color: #4a2b1e;
-            margin-bottom: 5px;
-            letter-spacing: -1px;
-        }
-
-        @media (max-width: 400px) {
-            .step-header {
-                font-size: 28px;
-            }
-        }
-
-        .step-sub {
-            text-align: center;
-            color: #a9714b;
-            font-size: 16px;
-            margin-bottom: 20px;
-            font-weight: 500;
-            border-bottom: 2px dashed #ffaa5e;
-            padding-bottom: 10px;
-        }
-
-        @media (max-width: 400px) {
-            .step-sub {
-                font-size: 15px;
-                margin-bottom: 15px;
-            }
-        }
-
-        /* Loader */
-        .loader-overlay {
-            position: fixed;
-            inset: 0;
-            background: #2b1b3ae0;
-            backdrop-filter: blur(3px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-        }
-        .loader-overlay.hidden {
-            display: none;
-        }
-
-        .spinner {
-            width: 70px;
-            height: 70px;
-            border: 8px solid #ffd966;
-            border-top-color: #e07c2c;
-            border-right-color: #e07c2c;
-            border-radius: 0;
-            animation: spin 1s infinite linear;
-        }
-
-        @media (max-width: 400px) {
-            .spinner {
-                width: 55px;
-                height: 55px;
-                border-width: 6px;
-            }
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Input Field - Responsive */
-        .input-container {
-            margin: 20px 0 20px;
-            background: #ffe8d6;
-            padding: 15px;
-            border-radius: 30px;
-            border: 3px solid #4a2b1e;
-        }
-
-        @media (max-width: 400px) {
-            .input-container {
-                padding: 12px;
-            }
-        }
-
-        .input-label {
-            display: block;
-            color: #4a2b1e;
-            font-weight: 800;
-            font-size: 16px;
-            margin-bottom: 12px;
-            margin-left: 8px;
-        }
-
-        .input-field {
-            width: 100%;
-            padding: 16px 20px;
-            background: white;
-            border: 3px solid #ffaa5e;
-            border-radius: 50px;
-            font-size: 16px;
-            color: #2b1b3a;
-            font-weight: 600;
-        }
-
-        @media (max-width: 400px) {
-            .input-field {
-                padding: 14px 16px;
-                font-size: 15px;
-            }
-        }
-
-        .input-field:focus {
-            outline: none;
-            border-color: #e07c2c;
-            box-shadow: 0 0 0 4px #ffd966;
-        }
-
-        /* Robux Selection - Mobile Optimized */
-        .robux-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .robux-item {
-            background: #ffe8d6;
-            border: 4px solid #4a2b1e;
-            border-radius: 25px;
-            padding: 12px 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.1s;
-            cursor: pointer;
-            flex: 1 1 160px;
-            min-width: 140px;
-        }
-
-        @media (max-width: 400px) {
-            .robux-item {
-                flex: 1 1 130px;
-                padding: 10px 12px;
-                border-width: 3px;
-            }
-        }
-
-        @media (max-width: 340px) {
-            .robux-item {
-                flex: 1 1 100%;
-            }
-        }
-
-        .robux-item.selected {
-            background: #ffd966;
-            border-color: #e07c2c;
-            box-shadow: 6px 6px 0 #4a2b1e;
-            transform: scale(1.02);
-        }
-
-        .robux-icon {
-            width: 45px;
-            height: 45px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e07c2c"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.03-1.43 1.18 0 1.87.54 1.99 1.43h1.86c-.11-1.37-1.06-2.56-2.83-2.97V5h-1.9v2.03c-1.85.4-3.05 1.72-3.05 3.22 0 1.88 1.48 2.79 3.72 3.35 1.78.46 2.3 1.03 2.3 1.75 0 .78-.7 1.48-2.09 1.48-1.34 0-2.17-.6-2.27-1.55H7.96c.12 1.61 1.34 2.84 3.18 3.2V19h1.9v-2.06c1.8-.4 3.05-1.63 3.05-3.2 0-1.95-1.48-2.9-3.78-3.6z"/></svg>') center/contain no-repeat;
-        }
-
-        @media (max-width: 400px) {
-            .robux-icon {
-                width: 38px;
-                height: 38px;
-            }
-        }
-
-        .robux-amount {
-            font-size: 26px;
-            font-weight: 900;
-            color: #4a2b1e;
-        }
-
-        @media (max-width: 400px) {
-            .robux-amount {
-                font-size: 22px;
-            }
-        }
-
-        .robux-amount small {
-            font-size: 14px;
-            font-weight: 700;
-            color: #e07c2c;
-            margin-left: 4px;
-        }
-
-        @media (max-width: 400px) {
-            .robux-amount small {
-                font-size: 12px;
-            }
-        }
-
-        /* ---------- Verification Area: Same but with mobile optimization ---------- */
-        .verification-area {
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 30px;
-            padding: 20px 14px;
-            margin: 20px 0 20px;
-            border: 1px dashed #b77bff;
-            text-align: center;
-        }
-
-        @media (max-width: 400px) {
-            .verification-area {
-                padding: 16px 10px;
-            }
-        }
-
-        .verification-message {
-            color: #f0e4ff;
-            font-size: 14px;
-            margin-bottom: 18px;
-            line-height: 1.7;
-            text-align: center;
-        }
-
-        .verification-message i {
-            color: #c084fc;
-            margin: 0 4px;
-        }
-
-        .instruction-box {
-            background: rgba(180, 130, 255, 0.1);
-            border-radius: 24px;
-            padding: 14px 12px;
-            margin: 15px 0;
-            border: 1px solid #b77bff40;
-        }
-
-        .instruction-step {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 14px;
-            text-align: left;
-            color: #fff;
-        }
-
-        .instruction-step:last-child {
-            margin-bottom: 0;
-        }
-
-        .step-number {
-            width: 26px;
-            height: 26px;
-            background: #b77bff;
-            border-radius: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            color: #0f0715;
-            flex-shrink: 0;
-            font-size: 15px;
-        }
-
-        .step-text {
-            font-size: 13px;
-            color: #e0d0ff;
-            line-height: 1.5;
-            text-align: left;
-        }
-
-        .step-text strong {
-            color: #c084fc;
-            font-weight: 600;
-        }
-
-        .verify-action-btn {
-            background: linear-gradient(145deg, #8b5cf6, #c084fc);
-            border: none;
-            color: white;
-            font-weight: 700;
-            font-size: 18px;
-            padding: 15px 18px;
-            border-radius: 40px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 15px 25px -5px #8b5cf680;
-            transition: 0.15s;
-            cursor: pointer;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        @media (max-width: 400px) {
-            .verify-action-btn {
-                font-size: 16px;
-                padding: 14px 16px;
-            }
-        }
-
-        .verify-action-btn:active {
-            transform: scale(0.98);
-            box-shadow: 0 5px 15px -5px #8b5cf6;
-        }
-        /* ---------- End Verification Area ---------- */
-
-        /* Navigation Buttons - Responsive */
-        .nav-button {
-            background: #4a2b1e;
-            border: none;
-            color: #ffd966;
-            font-weight: 800;
-            font-size: 18px;
-            padding: 16px 20px;
-            border-radius: 50px;
-            width: 100%;
-            margin-top: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            cursor: pointer;
-            border: 3px solid #ffaa5e;
-            box-shadow: 5px 5px 0 #2c1b10;
-        }
-
-        @media (max-width: 400px) {
-            .nav-button {
-                font-size: 16px;
-                padding: 14px 18px;
-                border-width: 3px;
-            }
-        }
-
-        .nav-button:active {
-            transform: translate(4px, 4px);
-            box-shadow: 2px 2px 0 #2c1b10;
-        }
-
-        #lockerContainer {
-            margin-top: 20px;
-            border-radius: 25px;
-            overflow: hidden;
-            border: 3px solid #b77bff;
-        }
-
-        /* New Elements - Responsive */
-        .quick-actions {
-            display: flex;
-            gap: 8px;
-            margin-top: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .quick-actions div {
-            background: #ffd966;
-            border: 3px solid #4a2b1e;
-            border-radius: 16px;
-            padding: 10px 14px;
-            font-weight: 700;
-            color: #2b1b3a;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex: 1 1 auto;
-            min-width: 90px;
-            justify-content: center;
-        }
-
-        @media (max-width: 400px) {
-            .quick-actions div {
-                padding: 8px 10px;
-                font-size: 12px;
-                min-width: 80px;
-            }
-        }
-
-        /* Mobile Spacing Improvements */
-        .focus-element {
-            scroll-margin-top: 20px;
-        }
-        .scroll-target {
-            scroll-margin-top: 80px;
-        }
-    </style>
-<link rel="me" href="https://www.blogger.com/profile/02841437598634275410" />
-<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-<meta name='google-adsense-platform-domain' content='blogspot.com'/>
-<link rel="me" href="https://www.blogger.com/profile/07204369817456545468" />
-<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
 <body>
 
-    <div class="notifications-panel" id="notificationPanel"></div>
+<div class="card">
 
-    <div class="card">
-        <!-- Stats Bar -->
-        <div class="stats-bar">
-            <div class="stat"><i class="fas fa-users"></i> <span id="liveViewers">2,451</span></div>
-            <div class="stat"><div class="live-dot"></div> <span id="totalRobux">41.2k</span></div>
-            <div class="stat"><i class="fas fa-bolt"></i> <span id="lastUpdate">5s ago</span></div>
-        </div>
+<div class="hero">
+<div class="logo">
+    <img src="https://i.postimg.cc/WbFQqzr7/Lululemon-Athletica-logo-svg.png" alt="Brand Logo">
+</div>
+<div class="badge">
+LIMITED-TIME SWEEPSTAKES
+</div>
 
-        <!-- Promo Banner -->
-        <div class="promo-banner">
-            <i class="fas fa-gift"></i>
-            <span>Offer: 5000 Robux</span>
-            <i class="fas fa-star"></i>
-        </div>
+<h1>Win a Lululemon Gift Card</h1>
 
-        <!-- Step 1 -->
-        <div id="step1" class="step">
-            <div class="step-header focus-element" id="focusStep1">Welcome!</div>
-            <div class="step-sub">Enter your Roblox account</div>
-            <div class="input-container">
-                <label class="input-label"><i class="fas fa-user-astronaut"></i> Username</label>
-                <input type="text" class="input-field" id="robloxUser" placeholder="Example: Xx_King_Roblox_xX" autocomplete="off">
-            </div>
-            <button class="nav-button" id="goToStep2"><i class="fas fa-arrow-right"></i> Continue</button>
-        </div>
+<p>
+Enter today for your chance to win and enjoy premium athletic apparel from Lululemon.
+</p>
 
-        <!-- Step 2 -->
-        <div id="step2" class="step hidden">
-            <div class="step-header focus-element" id="focusStep2">Choose Amount</div>
-            <div class="step-sub">Select and get it instantly</div>
-            <div class="robux-grid" id="robuxSelector">
-                <div class="robux-item" data-value="450">
-                    <div class="robux-icon"></div>
-                    <span class="robux-amount">450 <small>Robux</small></span>
-                </div>
-                <div class="robux-item" data-value="950">
-                    <div class="robux-icon"></div>
-                    <span class="robux-amount">950 <small>Robux</small></span>
-                </div>
-                <div class="robux-item" data-value="2400">
-                    <div class="robux-icon"></div>
-                    <span class="robux-amount">2.4k <small>Robux</small></span>
-                </div>
-                <div class="robux-item" data-value="5000">
-                    <div class="robux-icon"></div>
-                    <span class="robux-amount">5k <small>Robux</small></span>
-                </div>
-            </div>
-            <div class="scroll-target" id="step2ButtonTarget"></div>
-            <button class="nav-button" id="goToStep3"><i class="fas fa-check-double"></i> Verify</button>
-            <button class="nav-button" id="backToStep1" style="background:#3f2d1f; border-color:#a9714b;">↩ Back</button>
-        </div>
+</div>
 
-        <!-- Step 3 - Verification Area -->
-        <div id="step3" class="step hidden">
-            <div class="step-header focus-element" id="focusStep3">🔐 Human Verification</div>
-            <div class="step-sub">Complete the last step</div>
-            
-            <div class="verification-area">
-                <div class="verification-message">
-                    <i class="fas fa-shield-halved"></i> To complete human verification, please follow the instructions below:
-                </div>
-                
-                <div class="instruction-box">
-                    <div class="instruction-step">
-                        <div class="step-number">1</div>
-                        <div class="step-text">A <strong>special offer</strong> from one of our advertisers will appear after clicking the verify button</div>
-                    </div>
-                    <div class="instruction-step">
-                        <div class="step-number">2</div>
-                        <div class="step-text">Choose any suitable offer and click on it, you will be redirected to the offer page</div>
-                    </div>
-                    <div class="instruction-step">
-                        <div class="step-number">3</div>
-                        <div class="step-text">Enter your <strong>phone number</strong> in the designated field within the offer</div>
-                    </div>
-                    <div class="instruction-step">
-                        <div class="step-number">4</div>
-                        <div class="step-text">You will receive a <strong>verification code</strong> via SMS, enter it in the required field</div>
-                    </div>
-                    <div class="instruction-step">
-                        <div class="step-number">5</div>
-                        <div class="step-text">After entering the code, the Robux will be sent to your account immediately</div>
-                    </div>
-                </div>
+<div class="content">
 
-                <div class="scroll-target" id="step3ButtonTarget"></div>
-                <button class="verify-action-btn" id="triggerLocker" onclick="executeVerification()">
-                    <i class="fas fa-check-circle"></i> Click to Start Verification
-                </button>
-            </div>
-            <div id="lockerContainer"></div>
-            <button class="nav-button" id="backToStep2" style="background:#3f2d1f;">↩ Back</button>
-        </div>
+<div class="features">
 
-        <!-- Quick Actions -->
-        <div class="quick-actions">
-            <div><i class="fas fa-dice-d6"></i> Lottery</div>
-            <div><i class="fas fa-headset"></i> Support</div>
-            <div><i class="fas fa-gem"></i> Top-up</div>
-        </div>
-    </div>
+<div class="item">
+<h3>100%</h3>
+<span>Free Entry</span>
+</div>
 
-    <div id="globalLoader" class="loader-overlay hidden">
-        <div class="spinner"></div>
-    </div>
+<div class="item">
+<h3>24h</h3>
+<span>Quick Registration</span>
+</div>
 
-    <!-- Locker code -->
-    <script type="text/javascript">
-    var xAJuQ_noy_QsOvSc={"it":4424524,"key":"00ce9"};
-</script>
-<script src="https://d19k1sh57v5k0g.cloudfront.net/c4b13e4.js"></script>
+<div class="item">
+<h3>Secure</h3>
+<span>Protected Data</span>
+</div>
 
-    <script>
-        (function() {
-            const robuxNames = [
-                "xX_RobloxGod_Xx", "Crystal_Blox", "NinjaRoblox", "MasterBuilder99",
-                "RobloxPlayer_22", "AdoptMeKing", "JailbreakPro", "BloxburgQueen",
-                "TowerHero_77", "Arsenal_God", "Murderer_01", "PetSim_X"
-            ];
+</div>
 
-            let viewerCount = 2451;
-            let totalRobuxGen = 41200;
-            const viewerInterval = setInterval(() => {
-                viewerCount += Math.floor(Math.random() * 6) + 2;
-                document.getElementById('liveViewers').innerText = viewerCount.toLocaleString();
-            }, 9000);
+<a href="https://app.hawktrk.com/click?pid=2&offer_id=15720&sub2=u615343&sub5=s1SUBID1HERE" class="cta">
+ENTER THE SWEEPSTAKES
+</a>
 
-            setInterval(() => {
-                totalRobuxGen += Math.floor(Math.random() * 50) + 20;
-                document.getElementById('totalRobux').innerText = (totalRobuxGen / 1000).toFixed(1) + 'k';
-            }, 7000);
+<div class="footer">
+No purchase necessary. Entering does not guarantee that you will win. Winners are selected according to the official promotion rules. Eligibility restrictions may apply.
+</div>
 
-            function updateTimestamp() {
-                const seconds = Math.floor(Math.random() * 20) + 3;
-                document.getElementById('lastUpdate').innerText = `${seconds}s ago`;
-            }
-            setInterval(updateTimestamp, 13000);
-            updateTimestamp();
+</div>
 
-            function addFakeClaim() {
-                const panel = document.getElementById('notificationPanel');
-                const randomName = robuxNames[Math.floor(Math.random() * robuxNames.length)];
-                const amount = ['450', '950', '2,400', '5,000'][Math.floor(Math.random() * 4)];
-                const notif = document.createElement('div');
-                notif.className = 'notif-item';
-                notif.innerHTML = `
-                    <div class="notif-avatar">${randomName.charAt(0)}</div>
-                    <div class="notif-content">
-                        <div class="notif-username">${randomName}</div>
-                        <div class="notif-robux"><i class="fas fa-coins"></i> +${amount} Robux</div>
-                    </div>
-                `;
-                panel.appendChild(notif);
-                setTimeout(() => notif.remove(), 4800);
-            }
+</div>
 
-            addFakeClaim();
-            setInterval(addFakeClaim, 7000);
-
-            const step1 = document.getElementById('step1');
-            const step2 = document.getElementById('step2');
-            const step3 = document.getElementById('step3');
-            const loader = document.getElementById('globalLoader');
-
-            function transitionToStep(stepNumber, focusId, extraTargetId = null) {
-                loader.classList.remove('hidden');
-                setTimeout(() => {
-                    step1.classList.add('hidden');
-                    step2.classList.add('hidden');
-                    step3.classList.add('hidden');
-                    if (stepNumber === 1) step1.classList.remove('hidden');
-                    else if (stepNumber === 2) step2.classList.remove('hidden');
-                    else if (stepNumber === 3) step3.classList.remove('hidden');
-                    loader.classList.add('hidden');
-                    
-                    setTimeout(() => {
-                        const mainEl = document.getElementById(focusId);
-                        if (mainEl) mainEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        
-                        if (extraTargetId) {
-                            setTimeout(() => {
-                                document.getElementById(extraTargetId)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            }, 300);
-                        }
-                    }, 150);
-                }, 700);
-            }
-
-            document.getElementById('goToStep2').addEventListener('click', () => {
-                const username = document.getElementById('robloxUser').value.trim();
-                if (!username) {
-                    alert('Please enter your username');
-                    return;
-                }
-                sessionStorage.setItem('rbxUser', username);
-                transitionToStep(2, 'focusStep2', 'step2ButtonTarget');
-            });
-
-            document.getElementById('backToStep1').addEventListener('click', () => transitionToStep(1, 'focusStep1'));
-            document.getElementById('backToStep2').addEventListener('click', () => transitionToStep(2, 'focusStep2', 'step2ButtonTarget'));
-
-            document.getElementById('goToStep3').addEventListener('click', () => {
-                if (!document.querySelector('.robux-item.selected')) {
-                    alert('Please select a Robux amount first');
-                    return;
-                }
-                transitionToStep(3, 'focusStep3', 'step3ButtonTarget');
-            });
-
-            const robuxItems = document.querySelectorAll('.robux-item');
-            robuxItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    robuxItems.forEach(i => i.classList.remove('selected'));
-                    this.classList.add('selected');
-                });
-            });
-
-            window.executeVerification = function() {
-                const lockerDiv = document.getElementById('lockerContainer');
-                lockerDiv.innerHTML = '';
-                if (typeof _qW === 'function') {
-                    _qW();
-                } else {
-                    alert('An error occurred, please try again');
-                }
-
-                const btn = document.getElementById('triggerLocker');
-                const originalHtml = btn.innerHTML;
-                btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Preparing offers...';
-                setTimeout(() => {
-                    btn.innerHTML = originalHtml;
-                }, 2800);
-            };
-
-            window.addEventListener('load', () => {
-                setTimeout(() => {
-                    document.getElementById('focusStep1').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, 200);
-            });
-
-            window.addEventListener('beforeunload', () => {
-                clearInterval(viewerInterval);
-            });
-        })();
-    </script>
 </body>
 </html>
