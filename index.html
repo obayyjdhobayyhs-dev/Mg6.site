@@ -1,185 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Win a Lululemon Gift Card</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضاءة LED للسيارة | عرض خاص</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-body{
-background:linear-gradient(135deg,#111,#2a2a2a);
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:20px;
-}
+        .header h1 {
+            font-size: 28px;
+            font-weight: 800;
+        }
 
-.card{
-background:#fff;
-width:100%;
-max-width:460px;
-border-radius:24px;
-overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,.25);
-}
+        /* Hero Section */
+        .hero {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-.hero{
-background:#111;
-padding:40px 30px;
-color:#fff;
-text-align:center;
-}
+        .hero-img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 20px 0;
+        }
 
-.logo{
-    display:flex;
-    justify-content:center;
-    margin-bottom:20px;
-}
+        .offer-badge {
+            background: #ff4757;
+            color: white;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
 
-.logo img{
-    width:90px;
-    height:auto;
-    display:block;
-}
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
 
+        .hero h2 {
+            font-size: 32px;
+            color: #2d3436;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
 
-.badge{
-display:inline-block;
-padding:8px 16px;
-background:#fff;
-color:#111;
-font-weight:700;
-border-radius:30px;
-font-size:13px;
-margin-bottom:18px;
-}
+        .hero p {
+            font-size: 18px;
+            color: #636e72;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
 
-.hero h1{
-font-size:34px;
-font-weight:800;
-margin-bottom:10px;
-}
+        /* Colors Section */
+        .colors {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
 
-.hero p{
-opacity:.85;
-font-size:16px;
-}
+        .colors h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #2d3436;
+        }
 
-.content{
-padding:30px;
-}
+        .color-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-.features{
-display:flex;
-justify-content:space-between;
-margin-bottom:30px;
-}
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
 
-.item{
-flex:1;
-text-align:center;
-}
+        .color-box:hover {
+            transform: scale(1.1);
+        }
 
-.item h3{
-font-size:22px;
-color:#111;
-}
+        .white { background: linear-gradient(135deg, #ffffff 0%, #dfe6e9 100%); color: #2d3436; border: 2px solid #b2bec3; }
+        .cyan { background: linear-gradient(135deg, #00d2d3 0%, #00cec9 100%); }
+        .red { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); }
+        .green { background: linear-gradient(135deg, #26de81 0%, #20bf6b 100%); }
+        .pink { background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%); }
+        .blue { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
 
-.item span{
-font-size:13px;
-color:#777;
-}
+        /* Features */
+        .features {
+            background: white;
+            padding: 40px 20px;
+            margin: 20px 0;
+        }
 
-.cta{
-display:block;
-width:100%;
-padding:18px;
-text-align:center;
-background:#111;
-color:#fff;
-text-decoration:none;
-font-size:18px;
-font-weight:700;
-border-radius:14px;
-transition:.3s;
-}
+        .features h3 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #2d3436;
+        }
 
-.cta:hover{
-background:#333;
-}
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-.footer{
-margin-top:24px;
-text-align:center;
-font-size:13px;
-color:#777;
-line-height:1.6;
-}
-</style>
+        .feature-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
 
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Price Section */
+        .price-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .price-box {
+            background: white;
+            color: #333;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .old-price {
+            font-size: 24px;
+            text-decoration: line-through;
+            color: #b2bec3;
+            margin-bottom: 10px;
+        }
+
+        .new-price {
+            font-size: 56px;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .new-price span {
+            font-size: 24px;
+            color: #636e72;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #00b894;
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,184,148,0.4);
+        }
+
+        .cta-button:hover {
+            background: #00a383;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,184,148,0.5);
+        }
+
+        .guarantee {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px dashed #dfe6e9;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #636e72;
+        }
+
+        .guarantee span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 24px; }
+            .new-price { font-size: 42px; }
+            .color-box { width: 80px; height: 80px; font-size: 12px; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="card">
+    <section class="hero">
+        <div class="offer-badge"> خصم 50% لفترة محدودة</div>
+        <h2>حوّل سيارتك إلى تحفة فنية</h2>
+        <p>أضف لمسة من الأناقة والفخامة لسيارتك مع إضاءة LED الاحترافية المتوفرة بـ 6 ألوان رائعة</p>
+        <img src="https://i.postimg.cc/wxfKZWzm/46gis-O1Qnui-PJg8Wj-Z3t-G2RW6N0y-R5x-Dm-HFE2Qr-D.jpg" alt="إضاءة السيارة الداخلية" class="hero-img">
+    </section>
 
-<div class="hero">
-<div class="logo">
-    <img src="https://i.postimg.cc/WbFQqzr7/Lululemon-Athletica-logo-svg.png" alt="Brand Logo">
-</div>
-<div class="badge">
-LIMITED-TIME SWEEPSTAKES
-</div>
+    <section class="colors">
+        <h3>🎨 اختر لونك المفضل</h3>
+        <div class="color-container">
+            <div class="color-box white">أبيض</div>
+            <div class="color-box cyan">سماوي</div>
+            <div class="color-box red">أحمر</div>
+            <div class="color-box green">أخضر</div>
+            <div class="color-box pink">وردي</div>
+            <div class="color-box blue">أزرق</div>
+        </div>
+    </section>
 
-<h1>Win a Lululemon Gift Card</h1>
+    <section class="features">
+        <h3>💎 لماذا تختار منتجنا؟</h3>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h4>تركيب سهل</h4>
+                <p>يمكنك تركيبها بنفسك في دقائق بدون أدوات معقدة</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💡</div>
+                <h4>جودة عالية</h4>
+                <p>إضاءة ساطعة وموحدة تدوم لسنوات طويلة</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔧</div>
+                <h4>قابلة للقص</h4>
+                <p>يمكنك قص الشريط حسب طول السيارة</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🚗</div>
+                <h4>مناسبة للجميع</h4>
+                <p>تتناسب مع جميع أنواع السيارات</p>
+            </div>
+        </div>
+    </section>
 
-<p>
-Enter today for your chance to win and enjoy premium athletic apparel from Lululemon.
-</p>
+    <section class="price-section">
+        <div class="price-box">
+            <div class="old-price">300 درهم</div>
+            <div class="new-price">150 درهم <span>فقط</span></div>
+            <p style="font-size: 16px; color: #636e72; margin: 15px 0;">وفر 150 درهم اليوم!</p>
+            <a href="#order" class="cta-button"> اطلب الآن</a>
+            
+            <div class="guarantee">
+                <span>✓ ضمان 30 يوم</span>                
+                <span>✓ دفع آمن</span>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <div class="footer">
+        <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">📞 للدعم: <span dir="ltr">+372 59 122 332</span></p>
+    </div>
 
-<div class="content">
-
-<div class="features">
-
-<div class="item">
-<h3>100%</h3>
-<span>Free Entry</span>
-</div>
-
-<div class="item">
-<h3>24h</h3>
-<span>Quick Registration</span>
-</div>
-
-<div class="item">
-<h3>Secure</h3>
-<span>Protected Data</span>
-</div>
-
-</div>
-
-<a href="https://app.hawktrk.com/click?pid=2&offer_id=15720&sub2=u615343&sub5=s1SUBID1HERE" class="cta">
-ENTER THE SWEEPSTAKES
-</a>
-
-<div class="footer">
-No purchase necessary. Entering does not guarantee that you will win. Winners are selected according to the official promotion rules. Eligibility restrictions may apply.
-</div>
-
-</div>
-
-</div>
+    <script>
+        // Smooth scroll for buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert('شكراً لاهتمامك! سيتم توجيهك لإتمام الطلب');
+            });
+        });
+    </script>
 
 </body>
 </html>
