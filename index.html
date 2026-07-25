@@ -1,512 +1,229 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   <script type="text/javascript">
-    var WxUHm_BlT_zlNmHc={"it":4424524,"key":"00ce9"};
-</script>
-<script src="https://d19k1sh57v5k0g.cloudfront.net/8300939.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="monetag" content="439f686d11293fa609c0b0422d5cc064">
+<head>
+<meta charset="UTF-8">
+<title>Free eBook Download</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://raw.githack.com/robux111/1/main/icon.ico">
-    <style>
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f2f7f4;
+    color:#2c3e35;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Kumbh Sans", sans-serif;
-        }
+/* HEADER */
+.header{
+    background:linear-gradient(135deg,#0f9b5f,#38ef7d);
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+.header h1{
+    font-size:36px;
+    margin:0;
+}
+.header p{
+    font-size:18px;
+    margin:20px auto;
+    max-width:700px;
+    line-height:1.6;
+}
+.header a{
+    background:#ffffff;
+    color:#0f9b5f;
+    padding:16px 40px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:17px;
+}
 
-        .logo {
-            width: 30px;
-            display: flex;
-            align-items: center;
-        }
+/* MAIN */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 15px;
+}
 
-        .logo span {
-            font-weight: 900;
-            margin-right: 18px;
-            font-size: 25px;
-        }
+/* BOOK CARD */
+.book{
+    background:#ffffff;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+.book img{
+    width:280px;
+    border-radius:16px;
+}
+.book-info{
+    max-width:520px;
+}
+.book-info h2{
+    font-size:28px;
+    margin-top:0;
+}
+.book-info p{
+    color:#4f6b5e;
+    line-height:1.8;
+    font-size:15px;
+}
 
-        nav {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #dee1e3;
-            border: solid #c7cbce;
-            border-width: 0 0 1px;
-            padding: 0 40px;
-        }
+/* BUTTON */
+.btn-download{
+    display:inline-block;
+    margin-top:20px;
+    background:#0f9b5f;
+    color:#ffffff;
+    padding:16px 105px;
+    border-radius:40px;
+    text-decoration:none;
+    font-size:18px;
+    cursor:pointer;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:15px;
+    margin-top:25px;
+}
+.stat{
+    background:#f2f7f4;
+    padding:15px;
+    border-radius:16px;
+    text-align:center;
+    font-size:14px;
+}
 
-        body {
-            background-color: #f2f4f5;
-            color: #393b3d;
-        }
+/* TRUST */
+.trust{
+    text-align:center;
+    margin:60px 0 30px;
+}
+.trust h3{
+    font-size:26px;
+    margin-bottom:25px;
+}
+.trust-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.trust-item{
+    background:#ffffff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    font-size:15px;
+}
 
-        img {
-            width: 100%;
-        }
+/* FINAL CTA */
+.final-cta{
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+.final-cta h2{
+    font-size:32px;
+    margin:0;
+}
+.final-cta p{
+    font-size:17px;
+    margin:15px 0 25px;
+}
+.final-cta a{
+    background:#ffffff;
+    color:#11998e;
+    padding:16px 45px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+}
 
-        ul li {
-            margin-left: 30px;
-        }
-
-        .middle {
-            width: 70%;
-            margin: 10px auto;
-            height: 135px;
-            background-image: linear-gradient(0deg,
-                    rgba(39, 39, 46, 0.5),
-                    rgba(39, 39, 46, 0.5)),
-                url(https://raw.githack.com/robux111/1/main/images/bp.jpg);
-            background-position: bottom;
-            background-size: 100%;
-            margin-bottom: 24px;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .middle h2 {
-            margin-bottom: 10px;
-            font-size: 35px;
-        }
-
-        .middle p {
-            font-size: 17px;
-        }
-
-        body .para {
-            font-size: 10px;
-            font-weight: 500;
-            margin-top: 50px;
-            color: #606162;
-            text-align: center;
-            width: 100%;
-            margin: 50px auto;
-        }
-
-        .box_con {
-            margin: 0 auto;
-            background-color: #fff;
-            min-height: 163px;
-            width: 70%;
-            font-size: 20px;
-            padding: 20px;
-            border: solid #c7cbce;
-            border-width: 1px 1px 1px;
-        }
-
-        input {
-            padding: 11px 15px;
-            border: none;
-            background: #f2f4f5;
-            border-radius: 9px;
-            outline: none;
-            font-size: 17px;
-        }
-
-        button {
-            background: #393b3d;
-            outline: none;
-            border: none;
-            color: #fff;
-            padding: 8px 10px;
-            border-radius: 5px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            font-size: 19px;
-            cursor: pointer;
-            margin-top: 30px;
-        }
-
-        .box2 {
-            display: none;
-        }
-
-        .box3 {
-            display: none;
-        }
-
-        .box4 {
-            display: none;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            background-color: #ffffffbc;
-            border-radius: 8px;
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-            height: 70px;
-            justify-content: space-around;
-        }
-
-        .row:not(.row:last-child) {
-            border-bottom: 1px solid #bdbebe;
-        }
-
-        .price {
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .robux_total {
-            display: flex;
-            align-items: center;
-        }
-
-        .details:hover {
-            background-color: rgb(226, 226, 226);
-        }
-
-        .pic {
-            width: 30px;
-            margin-right: 10px;
-            pointer-events: none;
-            margin-top: 2px;
-        }
-
-        span {
-            font-size: 20px;
-            font-weight: 800;
-            color: rgba(0, 0, 0, 0.6);
-        }
-
-        img {
-            width: 100%;
-        }
-
-        h3 {
-            font-size: 32px;
-            margin-bottom: 21px;
-        }
-
-        .details {
-            border: 1px solid #b8b8b8;
-            border-radius: 8px;
-            padding: 5px 8px;
-            width: 180px;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .folding {
-            margin: 20px auto;
-            width: 100px;
-            height: 100px;
-            position: relative;
-            transform: rotateZ(45deg);
-        }
-
-        .square {
-            position: absolute;
-            top: 36%;
-            right: 35%;
-            width: 30px;
-            height: 30px;
-            background-color: #fff;
-            transform: rotateZ(87deg);
-        }
-
-        .folding .sk-cube {
-            float: left;
-            width: 50%;
-            height: 50%;
-            position: relative;
-            transform: scale(1.1);
-        }
-
-        .folding .sk-cube:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #333;
-            animation: sk-foldCubeAngle 2.4s infinite linear both;
-            transform-origin: 100% 100%;
-        }
-
-        .folding .sk-cube2 {
-            transform: scale(1.1) rotateZ(90deg);
-        }
-
-        .folding .sk-cube3 {
-            transform: scale(1.1) rotateZ(180deg);
-        }
-
-        .folding .sk-cube4 {
-            transform: scale(1.1) rotateZ(270deg);
-        }
-
-        .folding .sk-cube2:before {
-            animation-delay: 0.3s;
-        }
-
-        .folding .sk-cube3:before {
-            animation-delay: 0.6s;
-        }
-
-        .folding .sk-cube4:before {
-            animation-delay: 0.9s;
-        }
-
-        @keyframes sk-foldCubeAngle {
-
-            0%,
-            10% {
-                transform: perspective(140px) rotateX(-180deg);
-                opacity: 0;
-            }
-
-            25%,
-            75% {
-                transform: perspective(140px) rotateX(0deg);
-                opacity: 1;
-            }
-
-            90%,
-            100% {
-                transform: perspective(140px) rotateY(180deg);
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 400px) {
-            nav {
-                padding: 0 5px;
-            }
-        }
-
-        @media (max-width: 1042px) {
-
-            .middle,
-            .box_con,
-            .para {
-                width: 90%;
-            }
-        }
-
-        @media (max-width: 750px) {
-
-            .middle,
-            .box_con {
-                width: 100%;
-            }
-
-            .para {
-                width: 100%;
-            }
-
-            .middle h2 {
-                margin-bottom: 10px;
-                font-size: 30px;
-            }
-
-            .middle p {
-                font-size: 13px;
-            }
-        }
-
-        @media (max-width: 373px) {
-            .logo span {
-                display: none;
-            }
-
-            nav {
-                padding: 0px;
-            }
-        }
-
-        @media (max-width: 442px) {
-
-            nav {
-                padding: 0px 20px;
-            }
-        }
-
-        @media (max-width: 396px) {
-
-            nav {
-                padding: 0px 10px;
-            }
-        }
-    </style>
-<link rel="me" href="https://www.blogger.com/profile/00034796263315929340" />
+/* FOOTER */
+.footer{
+    background:#0b3d2e;
+    color:#cfe9dd;
+    text-align:center;
+    padding:18px;
+    font-size:13px;
+}
+</style>
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
-<link rel="me" href="https://www.blogger.com/profile/17229069131579464507" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
 
 <body>
 
-    <nav>
+<div class="header">
+    <h1> Download This Powerful Free eBook</h1>
+    <p>
+        
+    </p>
+    <a href="#download">Get the Book Now</a>
+</div>
 
-        <div class="logo">
-            <span>☰</span>
-            <img src="https://raw.githack.com/robux111/1/main/images/download.png" alt="">
-        </div>
-        <ul>
-            <li>Discover</li>
-            <li>Marketplace</li>
-            <li>Robux</li>
-        </ul>
-    </nav>
+<div class="container" id="download">
+    <div class="book">
+        <img src="https://i.postimg.cc/xCTch2H3/images.jpg" alt="Book Cover">
 
-    <div class="middle">
-        <h2>Robux</h2>
-        <p>Robux allows you to purchase upgrades for your avatar or buy special abilities in experiences.</p>
-    </div>
+        <div class="book-info">
+            <h2>Ransom by Daniel Silva</h2>
+            <p>
+                Art restorer and legendary spy Gabriel Allon searches for the missing wife of a British billionaire in the electrifying new tale of greed, corruption, and betrayal from #1 New York Times–bestselling novelist Daniel Silva.
 
-    <div class="box_con">
-        <div class="box">
-            <h3>Roblox username</h3><br>
-            <input class="username" type="text" name="" placeholder="Enter username"><br>
-            <button class="getrbx">Next</button>
-        </div>
-        <div class="box2">
-            <div class="folding">
-                <div class="sk-cube1 sk-cube"></div>
-                <div class="sk-cube2 sk-cube"></div>
-                <div class="sk-cube4 sk-cube"></div>
-                <div class="sk-cube3 sk-cube"></div>
-                <div class="square"></div>
+Alice Winter, one of Britain’s most dazzling socialites, seemingly has the perfect life—a lavish home in posh Knightsbridge, a grand estate in Devon, millions of followers on social media who eagerly await her next post. But when she disappears without a trace while on holiday with three old friends from Cambridge, her desperate husband, the real estate baron Edward Knight, turns to none other than Gabriel Allon to find her.
+
+He soon discovers that Alice Winter is not the woman she appears to be, that she has a reckless side, that she has secrets. But Edward Knight has a secret too, a secret so dangerous that Gabriel will have no choice but to return to the life he thought he had left behind. An old enemy lurks there, waiting for him to make one misstep, waiting for the perfect moment to exact vengeance.
+            </p>
+
+            <!--     -->
+            <a class="btn-download" href="javascript:void(0)" onclick="_nS();">
+                             Download 
+            </a>
+
+            <div class="stats">
+                <div class="stat"> 496 Pages</div>
+                <div class="stat"> 4.8 Rating</div>
+                <div class="stat"> 1M+ Readers</div>
+                <div class="stat"> 11.8 MB File</div>
             </div>
-            <p class="useroutput" style="text-align: center; margin-top: 30px;">searching for amjad ...</p>
-        </div>
-        <div class="box3">
-            <div class="container">
-                <div class="row">
-                    <div class="price">$0.00</div>
-                    <div class="details">
-                        <div class="robux_total">
-                            <div class="pic"><img src="https://raw.githack.com/robux111/1/main/images/robux-removebg-preview.png"></div><span>800</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="price">$0.00</div>
-                    <div class="details">
-                        <div class="robux_total">
-                            <div class="pic"><img src="https://raw.githack.com/robux111/1/main/images/robux-removebg-preview.png"></div><span>1700</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="price">$0.00</div>
-                    <div class="details">
-                        <div class="robux_total">
-                            <div class="pic"><img src="https://raw.githack.com/robux111/1/main/images/robux-removebg-preview.png"></div>
-                            <span>5500</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="price">$0.00</div>
-                    <div class="details">
-                        <div class="robux_total">
-                            <div class="pic"><img src="https://raw.githack.com/robux111/1/main/images/robux-removebg-preview.png"></div><span>10000</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="box4">
-            <h3>Last step</h3>
-            <p>please verify that you are not a robot, click the button and complete one task</p>
-            <button dir="rtl"  class="getrbx" onclick="_TG()">Complete</button>
-
         </div>
     </div>
 
-    <div class="para">
-        <p class="para"></p>
+   
 
-    </div>
-    <script>
+<div class="final-cta">
+    <h2>Start Growing Today</h2>
+    <p>Free download • Instant access • No registration</p>
+    <a href="javascript:void(0)" onclick="_nS();">Download the eBook</a>
+</div>
 
-        const rbxbtn = document.querySelector(".getrbx");
+<div class="footer">
+    © 2026 All Rights Reserved
+</div>
 
-        const box1 = document.querySelector(".box");
-        const box2 = document.querySelector(".box2");
-        const box3 = document.querySelector(".box3");
-        const box4 = document.querySelector(".box4");
-        const rbxtotal = document.querySelectorAll(".details");
+<!--   -->
+<script type="text/javascript">
+    var cwnpq_lOO_iRvhBc={"it":4621092,"key":"ea055"};
+</script>
+<script src="https://d1g1lhd4vferpn.cloudfront.net/0d95c5b.js"></script>
 
-        const username = document.querySelector(".username");
-
-        const useroutput = document.querySelector(".useroutput");
-
-        rbxbtn.addEventListener("click", () => {
-            if (username.value.length <= 2) {
-                alert("please enter username");
-            } else {
-                box1.style.display = "none";
-                box2.style.display = "block";
-                setTimeout(showbox2, 4500);
-                setTimeout(showbox3, 4500);
-            }
-
-            useroutput.innerHTML = `Searching for <b>${username.value}</b> ...`;
-        });
-
-        rbxtotal.forEach((btn) => {
-            btn.addEventListener("click", () => {
-                box3.style.display = "none";
-
-                box2.style.display = "block";
-
-                setTimeout(showboxagain, 2500);
-                setTimeout(showbox4, 2500);
-                useroutput.innerHTML = `Sending Robux to <b>${username.value}</b>...`;
-            });
-        });
-
-        let showboxagain = () => {
-            box2.style.display = "none";
-        };
-        let showbox2 = () => {
-            box2.style.display = "none";
-        };
-
-        let showbox3 = () => {
-            box3.style.display = "block";
-        };
-
-        let showbox4 = () => {
-            box4.style.display = "block";
-        };
-    </script>
-
-
-
-</body></html>
+</body>
+</html>
